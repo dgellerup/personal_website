@@ -9,6 +9,10 @@
   --brand-dark: #4f46e5; /* indigo-600 */
 }
 
+body {
+  @apply bg-gray-100 text-gray-400 dark:bg-gray-900;
+}
+
 /* Example: apply brand color to links */
 a {
   @apply font-medium text-indigo-500 hover:text-indigo-600;
