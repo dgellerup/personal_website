@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Optional: custom theme variables */
+:root {
+  --brand: #6366f1;   /* indigo-500 */
+  --brand-dark: #4f46e5; /* indigo-600 */
+}
+
+/* Example: apply brand color to links */
+a {
+  @apply font-medium text-indigo-500 hover:text-indigo-600;
+}
