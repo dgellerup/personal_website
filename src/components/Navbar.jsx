@@ -1,41 +1,19 @@
-import { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
-
-
-const link = ({ isActive }) =>
-  `px-2 py-1 hover:text-indigo-600 ${
-    isActive ? 'text-indigo-600 font-semibold' : 'text-gray-600 dark:text-gray-300'
-  }`
-
 export default function Navbar() {
-    const [dark, setDark] = useState(
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-schema: dark)').matches)
-    )
+  const link =
+    'px-3 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-indigo-600'
 
-    useEffect(() => {
-        document.documentElement.classList.toggle('dark', dark)
-        localStorage.theme = dark ? 'dark' : 'light'
-    }, [dark])
-
-    return (
-        <header className="nav">
-            <div className="container nav-inner">
-                <nav className="links">
-                    <NavLink to="/" className={link} end>Home</NavLink>
-                    <NavLink to="/projects" className={link}>Projects</NavLink>
-                    <NavLink to="/resume" className={link}>Resume</NavLink>
-                    <NavLink to="/contact" className={link}>Contact</NavLink>
-
-                    {/* Dark mode toggle button */}
-                    <button
-                        onClick={() => setDark((d) => !d)}
-                        className="ml-4 px-3 py-1 rounded border text-sm border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700"
-                    >
-                        {dark ? '☀️ Light' : '🌙 Dark'}
-                    </button>
-                </nav>
-            </div>
-        </header>
+  return (
+    <header className="fixed top-0 inset-x-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+      <div className="max-w-5xl mx-auto flex items-center justify-between px-4 h-14">
+        <div className="font-bold">Dane Gellerup</div>
+        <nav className="flex items-center gap-2">
+          <a className={link} href="#home">Home</a>
+          <a className={link} href="#projects">Projects</a>
+          <a className={link} href="#resume">Resume</a>
+          <a className={link} href="#education">Education</a>
+          <a className={link} href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
   )
 }
