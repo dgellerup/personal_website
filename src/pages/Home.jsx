@@ -1,7 +1,8 @@
 import React from "react"
 import ImageCarousel from "@/components/ImageCarousel"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Info } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Download, Info } from "lucide-react"
 import TechRow from "@/components/TechRow"
 
 export default function Home() {
@@ -13,9 +14,9 @@ export default function Home() {
                     <Card className="hover:shadow-md transition-shadow">
                         <CardHeader className="flex flex-col items-center text-center">
                             <CardTitle className="flex items-center justify-center gap-2 text-xl">
-                                Hi, I&lsquo;m Dane
+                                Hello there. I&lsquo;m Dane
                             </CardTitle>
-                            <CardContent>I build high-performance bioinformatics analyses, systems, and tools. I am an experienced <strong>Senior Full Stack Engineer</strong> with an extensive background in <strong>Bioinformatics</strong>, <strong>Next-Generation Sequencing</strong>, and <strong>Computer Science</strong>. My tech stack includes <strong>Python</strong>, <strong>Javascript/Typescript</strong>, <strong>Rust</strong>, <strong>AWS</strong>, <strong>PostgreSQL</strong>, <strong>Express.js</strong>, <strong>Angular</strong>, and <strong>React</strong>.</CardContent>
+                            <CardContent>I build high-performance bioinformatics analyses, systems, and tools. I am an experienced Senior Full Stack Engineer with an extensive background in Bioinformatics, Next-Generation Sequencing, and Computer Science.</CardContent>
                         </CardHeader>
                     </Card>
 
@@ -100,12 +101,27 @@ export default function Home() {
 
             <section id="resume" className="scroll-mt-20 mb-8">
                 <Card className="hover:shadow-md transition-shadow pb-4 space-y-2">
-                    <CardHeader className="flex flex-col items-center">
-                        <CardTitle className="text-xl">
+                    <CardHeader className="grid grid-cols-3 items-center">
+                        <div />
+
+                        <CardTitle className="text-xl text-center">
                             Resume
                         </CardTitle>
-                    </CardHeader>
 
+                        <div className="flex justify-end">
+                            <a
+                                href="/Dane_Gellerup_Resume.pdf"
+                                download
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button size="m" variant="ghost">
+                                    Download Resume <Download className="h-5 w-5" />
+                                </Button>
+                            </a>
+                        </div>
+                    </CardHeader>
+                    
                     <Card className="hover:shadow-md transition-shadow w-11/12 md:w-11/12 mx-auto bg-[#ff8c00]">
                         <CardHeader className="flex flex-col items-center">
                             <CardTitle className="flex items-center justify-center text-white gap-2 text-xl">
