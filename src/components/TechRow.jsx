@@ -6,6 +6,7 @@ export default function TechRow() {
     { name: 'Rust',         src: '/tech/rust.png',         href: 'https://www.rust-lang.org/' },
     { name: 'AWS',          src: '/tech/aws.png',          href: 'https://aws.amazon.com/' },
     { name: 'PostgreSQL',   src: '/tech/postgresql.png',   href: 'https://www.postgresql.org/' },
+    { name: 'Prisma',       src: '/tech/prisma.png',       href: 'https://www.prisma.io/' },
     { name: 'Express.js',   src: '/tech/express.png',      href: 'https://expressjs.com/' },
     { name: 'Angular',      src: '/tech/angular.png',      href: 'https://angular.dev/' },
     { name: 'React',        src: '/tech/react.png',        href: 'https://react.dev/' },
@@ -19,7 +20,7 @@ export default function TechRow() {
         </h2>
 
         <div
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-6
+          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 gap-6
                      p-3 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800"
         >
           {items.map((it) => (
